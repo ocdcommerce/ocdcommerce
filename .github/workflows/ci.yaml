@@ -50,8 +50,10 @@ jobs:
         uses: actions-rust-lang/setup-rust-toolchain@v1
       
       - name: Build project
-        run: cargo run
         run: cargo build
+      
+      - name: Run project
+        run: cargo run
         
       
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
