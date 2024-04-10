@@ -36,7 +36,6 @@ jobs:
 
 
   CodeReview:
-    name: checkout
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
