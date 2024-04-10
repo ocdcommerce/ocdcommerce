@@ -1,4 +1,4 @@
-name: Application
+name: Github Actions
 run-name: ${{ github.actor }} is quicksort
 on: [push]
 jobs:
@@ -17,12 +17,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
-
-
-name: Github Actions
-run-name: ${{ github.actor }} is quicksort
-on: [push]
-jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
