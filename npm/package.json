@@ -1,0 +1,23 @@
+{
+  "name": "quicksort",
+  "type": "module",
+  "description": "A very algorithm that does stuff sort quick.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ocdcommerce/quicksort"
+  },
+  "scripts": {
+    "dev": "tsx ./dev.ts",
+    "build": "tsx ./build.ts"
+  },
+  "dependencies": {
+    "ts-command-line-args": "^2.5.1",
+    "type-fest": "^4.7.1",
+    "yaml": "^2.3.3",
+    "yml": "^1.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.1.0"
+  }
+}
