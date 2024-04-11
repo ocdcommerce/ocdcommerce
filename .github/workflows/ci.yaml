@@ -104,6 +104,13 @@ jobs:
         run: |
           cd npm
           npm install
+      
+      - name: NPM Publish
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: npm/@ocdcommerce/core-win32-x64-msvc
+          access: public
         
       
       - name: Run Integrations
