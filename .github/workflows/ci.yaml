@@ -83,6 +83,12 @@ jobs:
           target: x86_64-pc-windows-msvc
         
       - name: Build
+        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      
+
+
+
+
         #env:
           #APP_VERSION: ${{env.APP_VERSION}}
       
