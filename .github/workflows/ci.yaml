@@ -89,8 +89,8 @@ jobs:
 
 
 
-        #env:
-          #APP_VERSION: ${{env.APP_VERSION}}
+        env:
+          APP_VERSION: ${{env.APP_VERSION}}
       
       - name: Run Integrations
         run: cargo test
