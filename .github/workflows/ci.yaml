@@ -17,6 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
+
   GithubActions:
     runs-on: ubuntu-latest
     steps:
@@ -62,6 +63,36 @@ jobs:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       
 
+
+
+  Latest-Release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+          
+      - name: Install rust
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+      
+      - name: Run Integrations
+        run: cargo test
+      
+      - name: Build project
+        run: cargo build
+      
+      - name: Run project
+        run: cargo run
+        
+      
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      
 
 
 
