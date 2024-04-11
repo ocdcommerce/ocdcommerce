@@ -83,8 +83,8 @@ jobs:
           target: x86_64-pc-windows-msvc
         
       - name: Build
-        env:
-          APP_VERSION: ${{env.APP_VERSION}}
+        #env:
+          #APP_VERSION: ${{env.APP_VERSION}}
       
       - name: Run Integrations
         run: cargo test
