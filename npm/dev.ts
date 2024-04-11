@@ -37,20 +37,20 @@ async function genPlatformPackage() {
     repository: repository!,
     homepage: homepage!,
     keywords: keywords!,
-    name: `@tailcallhq/core-${build}`,
+    name: `@ocdcommerce/core-${build}`,
     version,
-    bin: { tailcall: ext ? `./bin/tailcall${ext}` : `./bin/tailcall` },
+    bin: { ocdcommerce: ext ? `./bin/ocdcommerce${ext}` : `./bin/ocdcommerce` },
     os: [os],
     cpu: [cpu],
   }
 
   if (libc) platformPackage.libc = [libc]
 
-  const packagePath = `@tailcallhq/core-${build}`
+  const packagePath = `@ocdcommerce/core-${build}`
   const binPath = `${packagePath}/bin`
 
-  const targetPath = ext ? `../target/${target}/release/tailcall${ext}` : `../target/${target}/release/tailcall`
-  const tcPath = ext ? `${binPath}/tailcall${ext}` : `${binPath}/tailcall`
+  const targetPath = ext ? `../target/${target}/release/ocdcommerce${ext}` : `../target/${target}/release/ocdcommerce`
+  const tcPath = ext ? `${binPath}/ocdcommerce${ext}` : `${binPath}/ocdcommerce`
   const packageJsonPath = `${packagePath}/package.json`
   const readmePath = "../README.md"
 

@@ -1,11 +1,11 @@
 {
-  "name": "quicksort",
+  "name": "ocdcommerce",
   "type": "module",
   "description": "A very algorithm that does stuff sort quick.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ocdcommerce/quicksort"
+    "url": "https://github.com/ocdcommerce/ocdcommerce"
   },
   "scripts": {
     "dev": "tsx ./dev.ts",
