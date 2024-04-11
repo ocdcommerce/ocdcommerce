@@ -105,6 +105,15 @@ jobs:
           cd npm
           npm install
       
+      - name: Codecov
+        run: |
+          cd npm
+          npm run dev -- --target x86_64-pc-windows-msvc --version ${{ env.APP_VERSION }} --build win32-x64-msvc --ext ".exe" --libc msvc
+      
+      - name: Setup .npmrc file to publish to npm
+        run: echo "//registry.npmjs.org/:_authToken=$GH" > ~/.npmrc
+
+      
       - name: NPM Publish
         uses: JS-DevTools/npm-publish@v3
         with:
