@@ -93,6 +93,17 @@ jobs:
           command: build
           #args: --no-default-features --features cli
           args: --no-default-features --release --target x86_64-pc-windows-msvc
+      
+      - name: Install nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.11.0
+          registry-url: https://registry.npmjs.org
+      
+      - name: Install dependencies
+        run: |
+          cd npm
+          npm install
         
       
       - name: Run Integrations
