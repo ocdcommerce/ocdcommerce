@@ -111,7 +111,7 @@ jobs:
           npm run dev -- --target x86_64-pc-windows-msvc --version ${{ env.APP_VERSION }} --build win32-x64-msvc --ext ".exe" --libc msvc
       
       - name: Setup .npmrc file to publish to npm
-        run: echo "//registry.npmjs.org/:_authToken=$GH" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
 
       
       - name: NPM Publish
