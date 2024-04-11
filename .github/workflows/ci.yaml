@@ -83,14 +83,10 @@ jobs:
           target: x86_64-pc-windows-msvc
         
       - name: Build
-        run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      
-
-
-
-
+        run: echo "token"
         env:
           APP_VERSION: ${{env.APP_VERSION}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       
       - name: Run Integrations
         run: cargo test
